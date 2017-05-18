@@ -2,9 +2,8 @@
 
 
 
-function speak()
-{
-console.log('Hello');
+function speak() {
+  console.log('Hello');
 }
 
 speak();
