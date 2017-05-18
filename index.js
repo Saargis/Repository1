@@ -2,12 +2,19 @@
 
 
 
-const speak = function() {
-  const arr = ['foo', 'bar', 'baz'];
+const speak = function(arr) {
+
+  const newArray = [];
+
   for(const i of arr)
   {
-    console.log(i.toUpperCase());
+    newArray.push(i.toUpperCase());
   }
+  return newArray;
 }
 
-speak();
+
+//const arr = ['foo', 'bar', 'baz']
+
+const res = speak(['hello', 'world']);
+console.log(res);
