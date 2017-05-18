@@ -4,7 +4,7 @@
 const http = require('http');
 
 const server = http.createServer((req,res) =>{
-  if(rq.url === '/')
+  if(req.url === '/')
   {
     res.setHeader('content-type','text/html');
     res.end(`
