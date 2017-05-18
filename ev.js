@@ -1,6 +1,6 @@
 'use strict';
 
-let counter = 0;
+//let counter = 0;
 
 // setInterval(function()
 // {
