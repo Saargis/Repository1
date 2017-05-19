@@ -11,8 +11,21 @@ sock.on('connect', () => {
 sock.setEncoding('utf-8');
 const total_data = [];
 sock.on('data', d => total_data.push(d));
-sock.on('end',
-    () => console.log(total_data.reduce((prev, total) => prev + total)));
+sock.on('end',() =>{
+
+    const result = total_data.reduce((prev, total) => prev + total);
+    const a = result.split('\n\r');
+    //console.log(a);
+    const head = a[0].split('\r\n');
+    //console.log(head);
+    const obj = {
+
+      headers: head,
+      body: a[1]
+    }
+    console.log(obj);
+
+})
 
 sock.connect({
   port: 80,
