@@ -8,9 +8,13 @@ const lower = (str) =>{
   return str.toLowerCase();
 }
 
+const PORT = 8080;
+
 module.exports = {
   upper,
-  lower
+  lower,
+  PORT,
+  something: 5
 }
 
 //(arguments) => { body }

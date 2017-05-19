@@ -2,8 +2,8 @@
 
 
 const http = require('http');
-const p = require('./ports');
-//const l = require('./ports');
+const {PORT, upper, lower} = require('./ports');
+const [a, b] = [1, 2];
 
 const server = http.createServer((req,res) =>{
   if(req.url === '/'){
@@ -11,8 +11,8 @@ const server = http.createServer((req,res) =>{
     res.end(`
       <!doctype html>
       <body>
-        <h1> ${p.upper(__dirname)} </h1>
-        <p> ${p.lower('WHAT a body =P')} </p>
+        <h1> ${upper(__dirname)} </h1>
+        <p> ${lower('WHAT a body =P')} </p>
       <body>
       `)
   }else {
@@ -20,4 +20,4 @@ const server = http.createServer((req,res) =>{
   }
 })
 
-server.listen(8080, () => console.log('Started our server'));
+server.listen(PORT, () => console.log('Started our server'));
