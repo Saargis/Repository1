@@ -1,6 +1,6 @@
 'use strict';
 
-const upper = (str) =>{
+const lower = (str) =>{
   return str.toLowerCase();
 }
 
