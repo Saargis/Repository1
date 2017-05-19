@@ -3,6 +3,7 @@
 
 const http = require('http');
 const p = require('./ports');
+const l = require('./soSmall');
 
 const server = http.createServer((req,res) =>{
   if(req.url === '/')
@@ -12,7 +13,7 @@ const server = http.createServer((req,res) =>{
       <!doctype html>
       <body>
         <h1> ${p.upper(__dirname)} </h1>
-        <p> what a body =P </p>
+        <p> ${l.lower('WHAT a body =P')} </p>
       <body>
       `)
   }else {
